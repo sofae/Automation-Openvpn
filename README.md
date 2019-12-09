@@ -1,5 +1,9 @@
-# OpenVPN-Server一键式部署
-Automation Install OpenVPN Server
+# 自动化部署OPENVPN服务用于企业运维
+# Automation Install OpenVPN Server
+
+实现效果:
+拨入openvpn后仅访问公司内网,可通过修改push "route x.x.x.x x.x.x.x"增加访问网段
+访问外网依然使用原本地网络
 
 1、创建checkpsw.sh文件
 添加执行权限
