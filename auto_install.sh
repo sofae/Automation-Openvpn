@@ -1,9 +1,4 @@
 #!/bin/bash
-#
-# https://github.com/plutosherry/OpenVPN-Server
-#
-# Copyright (c) 2018 plutosherry Released under the GIT License.
-
 
 # Detect Debian users running the script with "sh" instead of bash
 if readlink /proc/$$/exe | grep -q "dash"; then
