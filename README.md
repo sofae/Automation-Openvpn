@@ -17,3 +17,5 @@ admin 123456 (前面是用户 后面是密码)
 chmod 400 /etc/openvpn/psw-file  
 chown nobody.nobody /etc/openvpn/psw-file  
   
+服务重启
+systemctl restart openvpn@server.service
