@@ -10,7 +10,7 @@
 chmod +x /etc/openvpn/checkpsw.sh  
 
 2、创建用户和密码认证文件  
-vim /etc/openvpn/psw-file  
+vi /etc/openvpn/psw-file  
 admin 123456 (前面是用户 后面是密码)  
   
 注：psw-file的权限  
