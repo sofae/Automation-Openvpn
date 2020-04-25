@@ -17,5 +17,12 @@ admin 123456 (前面是用户 后面是密码)
 chmod 400 /etc/openvpn/psw-file  
 chown nobody.nobody /etc/openvpn/psw-file  
   
+分配固定IP  
+vi server.conf  
+client-config-dir ccd  
+mkdir ccd  
+vi user  
+ifconfig-push 10.168.168.168 255.255.255.0  
+  
 服务重启
 systemctl restart openvpn@server.service
