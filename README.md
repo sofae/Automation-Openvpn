@@ -21,7 +21,7 @@ chown nobody.nobody /etc/openvpn/psw-file
 vi server.conf  
 client-config-dir ccd  
 mkdir ccd  
-vi user  
+vi ccd/user  
 ifconfig-push 10.168.168.168 255.255.255.0  
   
 服务重启
