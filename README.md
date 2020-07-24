@@ -29,6 +29,7 @@ systemctl restart openvpn@server.service
 
 iptables -t nat -A POSTROUTING -s 10.20.8.0/24 -o eth0 -j MASQUERADE  
 iptables -t nat -A POSTROUTING -s 10.20.8.0/24 -d 172.17.161.0/24 -j MASQUERADE  
+iptables -t nat -A POSTROUTING -s 10.20.8.0/24 -d 172.17.16.0/20 -j MASQUERADE  
   
 iptables –t nat –L –n  
 iptables-restore < /etc/iptables.rules  
