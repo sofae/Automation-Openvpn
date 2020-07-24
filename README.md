@@ -28,3 +28,8 @@ ifconfig-push 10.168.168.168 255.255.255.0
 systemctl restart openvpn@server.service
 
 iptables -t nat -A POSTROUTING -s 10.20.8.0/24 -o eth0 -j MASQUERADE  
+
+  
+iptables –t nat –L –n  
+iptables-restore < /etc/iptables.rules  
+iptables-save > /etc/iptables.rules  
