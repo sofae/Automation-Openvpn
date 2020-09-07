@@ -26,15 +26,15 @@ ifconfig-push 10.168.168.168 255.255.255.0
   
 服务重启
 systemctl restart openvpn@server.service
-
-systemctl stop firewalld
-systemctl disable firewalld
-systemctl mask firewalld
-
-yum install iptables-services
-systemctl enable iptables.service
-systemctl start iptables.service
-
+  
+systemctl stop firewalld  
+systemctl disable firewalld  
+systemctl mask firewalld  
+  
+yum install iptables-services  
+systemctl enable iptables.service  
+systemctl start iptables.service  
+  
 iptables -t nat -A POSTROUTING -s 10.20.8.0/24 -o eth0 -j MASQUERADE  
 iptables -t nat -A POSTROUTING -s 10.20.8.0/24 -d 172.17.161.0/24 -j MASQUERADE  
 iptables -t nat -A POSTROUTING -s 10.20.8.0/24 -d 172.17.16.0/20 -j MASQUERADE  
