@@ -34,6 +34,9 @@ systemctl mask firewalld
 yum install iptables-services  
 systemctl enable iptables.service  
 systemctl start iptables.service  
+
+echo 'net.ipv4.ip_forward = 1' >> /etc/sysctl.conf  
+sysctl -p  
   
 iptables -t nat -A POSTROUTING -s 10.20.8.0/24 -o eth0 -j MASQUERADE  
 iptables -t nat -A POSTROUTING -s 10.20.8.0/24 -d 172.17.161.0/24 -j MASQUERADE  
