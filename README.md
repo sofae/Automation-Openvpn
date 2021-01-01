@@ -46,3 +46,16 @@ iptables -t nat -A POSTROUTING -s 10.30.8.0/24 -p udp --dport 53 -o eth0 -j MASQ
 iptables -t nat -L -n  
 iptables-restore < /etc/iptables.rules  
 iptables-save > /etc/iptables.rules  
+
+网段互通  
+server.conf  
+client-to-client  #客户端互通  
+route 192.168.1.0 255.255.255.0 10.50.8.226  #客户端网段声明  
+  
+ccd/k3s 
+ifconfig-push 10.50.8.226 255.255.255.0  #绑定客户端IP  
+iroute 192.168.1.0 255.255.255.0  #服务端到客户端路由  
+  
+服务端，客户端各自添加路由  
+阿里云路由在VPC路由表中添加  
+
