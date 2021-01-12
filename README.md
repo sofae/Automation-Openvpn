@@ -56,13 +56,16 @@ ccd/k3s
 ifconfig-push 10.50.8.226 255.255.255.0  #绑定客户端IP  
 iroute 192.168.1.0 255.255.255.0  #服务端到客户端路由  
   
+iptables -t nat -A POSTROUTING -s 10.50.8.0/24 ! -d 10.50.8.0/24 -j SNAT --to 172.30.32.4  
+  
 服务端，客户端各自添加路由  
 阿里云路由在VPC路由表中添加  
-
+iptables -t nat -A POSTROUTING -s 192.168.1.0/24 -j MASQUERADE  
+  
 iptables 删除单条规则  
 iptables -t nat -nL POSTROUTING --line-number  
 iptables -t nat -D POSTROUTING 7  
-
+  
 QA:  
 ping 出现 Destination Host Prohibited  
 iptables -t filter -nvL --line-number  
