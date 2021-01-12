@@ -62,3 +62,14 @@ iroute 192.168.1.0 255.255.255.0  #服务端到客户端路由
 iptables 删除单条规则  
 iptables -t nat -nL POSTROUTING --line-number  
 iptables -t nat -D POSTROUTING 7  
+
+QA:  
+ping 出现 Destination Host Prohibited  
+iptables -t filter -nvL --line-number  
+6      759  111K REJECT     all  --  *      *       0.0.0.0/0            0.0.0.0/0            reject-with icmp-host-prohibited  
+清除规则  
+iptables -t filter -D INPUT 6  
+  
+  
+
+
