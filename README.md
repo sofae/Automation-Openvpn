@@ -23,7 +23,13 @@ client-config-dir ccd
 mkdir ccd  
 vi ccd/user  
 ifconfig-push 10.168.168.168 255.255.255.0  
-  
+
+增加登陆验证  
+server.conf  
+reneg-sec 300  
+client-connect checkpsw.sh  
+client-disconnect checkpsw.sh  
+
 服务重启
 systemctl restart openvpn@server.service
   
