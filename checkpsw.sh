@@ -2,7 +2,7 @@
 PASSFILE="/etc/openvpn/psw-file"
 LOG_FILE="/etc/openvpn/openvpn-authorized.log"
 TIME_STAMP=`date "+%Y-%m-%d %T"`
-Ding_Webhook_Token="542866c9e6c7770aae7ff36e8be613584f5405772142a29e0414db1a5652b905"
+Ding_Webhook_Token="xxxxxxxxxxxxxxxxxxxxxx"
 Ding_Webhook="https://oapi.dingtalk.com/robot/send?access_token="$Ding_Webhook_Token
 #DevOpsUrl="http://10.50.8.222/user/vpnlog/"
 ENVIRONMENT="生产环境"
