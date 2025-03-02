@@ -26,7 +26,7 @@ elif [[ -e /etc/centos-release || -e /etc/redhat-release || -e /etc/anolis-relea
         GROUPNAME=nobody
         RCLOCAL='/etc/rc.d/rc.local'
 else
-        echo "Looks like you aren't running this installer on Debian, Ubuntu or CentOS, Kylin"
+        echo "Looks like you aren't running this installer on Debian, Ubuntu or CentOS, Kylin, Anolis"
         exit
 fi
 
