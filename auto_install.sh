@@ -21,11 +21,7 @@ if [[ -e /etc/debian_version ]]; then
         OS=debian
         GROUPNAME=nogroup
         RCLOCAL='/etc/rc.local'
-elif [[ -e /etc/centos-release || -e /etc/redhat-release ]]; then
-        OS=centos
-        GROUPNAME=nobody
-        RCLOCAL='/etc/rc.d/rc.local'
-elif [[ -e /etc/kylin-release ]]; then
+elif [[ -e /etc/centos-release || -e /etc/redhat-release || -e /etc/anolis-release || -e /etc/kylin-release ]]; then
         OS=centos
         GROUPNAME=nobody
         RCLOCAL='/etc/rc.d/rc.local'
