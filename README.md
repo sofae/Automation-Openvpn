@@ -9,8 +9,8 @@
 添加执行权限  
 chmod +x /etc/openvpn/checkpsw.sh  
 
-touch /etc/openvpn/openvpn-authorized.log
-chmod 666 /etc/openvpn/openvpn-authorized.log
+touch /etc/openvpn/openvpn-authorized.log  
+chmod 666 /etc/openvpn/openvpn-authorized.log  
 
 2、创建用户和密码认证文件  
 vi /etc/openvpn/psw-file  
